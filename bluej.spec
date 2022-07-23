@@ -31,6 +31,9 @@ install -Dm 0644 THIRDPARTYLICENSE.txt %{buildroot}/opt/%{name}/THIRDPARTYLICENS
 
 install -Dm 0664 bluej.desktop         %{buildroot}/usr/share/applications/bluej.desktop
 
+%post
+ln -s /usr/lib/jvm/openjfx/ /usr/lib/jvm/openjfx/lib
+
 %files
 %license LICENSE.txt
 %doc README.TXT
